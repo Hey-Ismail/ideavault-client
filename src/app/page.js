@@ -10,30 +10,90 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+
+// //  {
+//         "id": 1,
+//         "title": "StudyBuddy AI",
+//         "shortDescription": "AI-powered study assistant for university students.",
+//         "detailedDescription": "StudyBuddy AI helps students generate notes, quizzes, and personalized study plans based on course materials.",
+//         "category": "AI",
+//         "tags": [
+//             "AI",
+//             "Education",
+//             "Students"
+//         ],
+//         "imageURL": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+//         "estimatedBudget": "$15,000",
+//         "targetAudience": "University Students",
+//         "problemStatement": "Students struggle to organize study materials efficiently.",
+//         "proposedSolution": "Provide AI-generated summaries, quizzes, and study schedules.",
+//         "createdBy": "john@example.com",
+//         "createdAt": "2026-06-15"
+//     },
+//     {
+//         "id": 2,
+//         "title": "MediTrack",
+//         "shortDescription": "Smart medication reminder platform.",
+//         "detailedDescription": "A healthcare platform that reminds patients to take medications and tracks adherence.",
+//         "category": "Health",
+//         "tags": [
+//             "Health",
+//             "Medicine",
+//             "Reminder"
+//         ],
+//         "imageURL": "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+//         "estimatedBudget": "$20,000",
+//         "targetAudience": "Patients and Elderly People",
+//         "problemStatement": "Many patients forget their medication schedules.",
+//         "proposedSolution": "Automated reminders and progress tracking.",
+//         "createdBy": "alice@example.com",
+//         "createdAt": "2026-06-12"
+//     },
+//     {
+//         "id": 3,
+//         "title": "GreenCart",
+//         "shortDescription": "Eco-friendly grocery delivery service.",
+//         "detailedDescription": "Connects customers with local organic farmers and provides sustainable delivery.",
+//         "category": "Environment",
+//         "tags": [
+//             "Eco",
+//             "Food",
+//             "Delivery"
+//         ],
+//         "imageURL": "https://images.unsplash.com/photo-1542838132-92c53300491e",
+//         "estimatedBudget": "$30,000",
+//         "targetAudience": "Eco-conscious Consumers",
+//         "problemStatement": "Access to fresh organic products is limited.",
+//         "proposedSolution": "Direct farmer-to-customer delivery platform.",
+//         "createdBy": "mike@example.com",
+//         "createdAt": "2026-06-10"
+//     // },
 const slides = [
   {
     id: 1,
-    title: "Turn Your Startup Vision Into Reality",
+    title: "StudyBuddy AI",
     description:
-      "Discover groundbreaking ideas, connect with innovators, and build the next big thing.",
+      "StudyBuddy AI helps students generate notes, quizzes, and personalized study plans based on course materials.",
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+
+    // "imageURL": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3
   },
   {
     id: 2,
-    title: "Innovation Starts With One Great Idea",
+    title: "MediTrack",
     description:
-      "Explore creative solutions and inspiring startup concepts from entrepreneurs around the world.",
+      "A healthcare platform that reminds patients to take medications and tracks adherence.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
   },
   {
     id: 3,
-    title: "Collaborate, Create, and Grow",
+    title: "GreenCart",
     description:
-      "Join a community of dreamers and makers to transform ideas into successful ventures.",
+      "Connects customers with local organic farmers and provides sustainable delivery.",
     image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200",
+      "https://images.unsplash.com/photo-1542838132-92c53300491e",
   },
 ];
 export default function Home() {
@@ -69,7 +129,7 @@ export default function Home() {
                     </p>
 
                     <Link
-                      href="/explore-ideas"
+                      href="/ideas"
                       className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold hover:bg-blue-700 transition"
                     >
                       Explore Ideas →
@@ -111,7 +171,7 @@ export default function Home() {
             </p>
 
             <button className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-              Explore Ideas
+              Explore your Ideas
             </button>
           </div>
         </div>
