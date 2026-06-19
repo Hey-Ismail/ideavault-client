@@ -1,0 +1,192 @@
+[
+    {
+        "id": 1,
+        "title": "StudyBuddy AI",
+        "shortDescription": "AI-powered study assistant for university students.",
+        "detailedDescription": "StudyBuddy AI helps students generate notes, quizzes, and personalized study plans based on course materials.",
+        "category": "AI",
+        "tags": [
+            "AI",
+            "Education",
+            "Students"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+        "estimatedBudget": "$15,000",
+        "targetAudience": "University Students",
+        "problemStatement": "Students struggle to organize study materials efficiently.",
+        "proposedSolution": "Provide AI-generated summaries, quizzes, and study schedules.",
+        "createdBy": "john@example.com",
+        "createdAt": "2026-06-15"
+    },
+    {
+        "id": 2,
+        "title": "MediTrack",
+        "shortDescription": "Smart medication reminder platform.",
+        "detailedDescription": "A healthcare platform that reminds patients to take medications and tracks adherence.",
+        "category": "Health",
+        "tags": [
+            "Health",
+            "Medicine",
+            "Reminder"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+        "estimatedBudget": "$20,000",
+        "targetAudience": "Patients and Elderly People",
+        "problemStatement": "Many patients forget their medication schedules.",
+        "proposedSolution": "Automated reminders and progress tracking.",
+        "createdBy": "alice@example.com",
+        "createdAt": "2026-06-12"
+    },
+    {
+        "id": 3,
+        "title": "GreenCart",
+        "shortDescription": "Eco-friendly grocery delivery service.",
+        "detailedDescription": "Connects customers with local organic farmers and provides sustainable delivery.",
+        "category": "Environment",
+        "tags": [
+            "Eco",
+            "Food",
+            "Delivery"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1542838132-92c53300491e",
+        "estimatedBudget": "$30,000",
+        "targetAudience": "Eco-conscious Consumers",
+        "problemStatement": "Access to fresh organic products is limited.",
+        "proposedSolution": "Direct farmer-to-customer delivery platform.",
+        "createdBy": "mike@example.com",
+        "createdAt": "2026-06-10"
+    },
+    {
+        "id": 4,
+        "title": "SkillSwap",
+        "shortDescription": "Exchange skills without spending money.",
+        "detailedDescription": "Users teach skills they know and learn skills they need through a credit system.",
+        "category": "Education",
+        "tags": [
+            "Learning",
+            "Skills",
+            "Community"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+        "estimatedBudget": "$10,000",
+        "targetAudience": "Students and Professionals",
+        "problemStatement": "Learning new skills can be expensive.",
+        "proposedSolution": "Peer-to-peer skill exchange platform.",
+        "createdBy": "emma@example.com",
+        "createdAt": "2026-06-09"
+    },
+    {
+        "id": 5,
+        "title": "ParkEasy",
+        "shortDescription": "Find available parking spaces instantly.",
+        "detailedDescription": "Real-time parking availability using IoT sensors and mobile navigation.",
+        "category": "Tech",
+        "tags": [
+            "Smart City",
+            "Parking",
+            "IoT"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a",
+        "estimatedBudget": "$40,000",
+        "targetAudience": "Urban Drivers",
+        "problemStatement": "Drivers waste time searching for parking.",
+        "proposedSolution": "Live parking map and reservation system.",
+        "createdBy": "robert@example.com",
+        "createdAt": "2026-06-08"
+    },
+    {
+        "id": 6,
+        "title": "PetCare Connect",
+        "shortDescription": "Online healthcare services for pets.",
+        "detailedDescription": "Pet owners can consult veterinarians and schedule appointments online.",
+        "category": "Health",
+        "tags": [
+            "Pets",
+            "Healthcare",
+            "Veterinary"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1517849845537-4d257902454a",
+        "estimatedBudget": "$18,000",
+        "targetAudience": "Pet Owners",
+        "problemStatement": "Access to veterinary advice is limited.",
+        "proposedSolution": "Virtual consultations and pet health records.",
+        "createdBy": "sarah@example.com",
+        "createdAt": "2026-06-06"
+    },
+    {
+        "id": 7,
+        "title": "TravelMate",
+        "shortDescription": "AI-generated personalized travel itineraries.",
+        "detailedDescription": "Creates optimized travel plans based on budget, interests, and duration.",
+        "category": "Travel",
+        "tags": [
+            "Travel",
+            "AI",
+            "Planning"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1488646953014-85cb44e25828",
+        "estimatedBudget": "$22,000",
+        "targetAudience": "Travel Enthusiasts",
+        "problemStatement": "Trip planning takes a lot of time.",
+        "proposedSolution": "AI-generated itineraries and recommendations.",
+        "createdBy": "tom@example.com",
+        "createdAt": "2026-06-05"
+    },
+    {
+        "id": 8,
+        "title": "FitFusion",
+        "shortDescription": "Personalized fitness coaching platform.",
+        "detailedDescription": "Connects users with trainers and generates adaptive workout plans.",
+        "category": "Health",
+        "tags": [
+            "Fitness",
+            "Workout",
+            "Health"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+        "estimatedBudget": "$25,000",
+        "targetAudience": "Fitness Enthusiasts",
+        "problemStatement": "Many people lack personalized workout guidance.",
+        "proposedSolution": "AI + trainer-based coaching system.",
+        "createdBy": "olivia@example.com",
+        "createdAt": "2026-06-04"
+    },
+    {
+        "id": 9,
+        "title": "FarmSense",
+        "shortDescription": "Smart farming assistant for crop monitoring.",
+        "detailedDescription": "Uses sensors and analytics to monitor crop health and irrigation.",
+        "category": "Agriculture",
+        "tags": [
+            "Farming",
+            "IoT",
+            "Analytics"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854",
+        "estimatedBudget": "$35,000",
+        "targetAudience": "Farmers",
+        "problemStatement": "Farmers lack real-time crop insights.",
+        "proposedSolution": "Sensor-driven crop monitoring platform.",
+        "createdBy": "david@example.com",
+        "createdAt": "2026-06-03"
+    },
+    {
+        "id": 10,
+        "title": "CodeMentor Hub",
+        "shortDescription": "Connect beginner developers with mentors.",
+        "detailedDescription": "A platform where developers receive code reviews, career guidance, and project feedback.",
+        "category": "Education",
+        "tags": [
+            "Programming",
+            "Mentorship",
+            "Career"
+        ],
+        "imageURL": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+        "estimatedBudget": "$12,000",
+        "targetAudience": "Junior Developers",
+        "problemStatement": "New developers struggle to find guidance.",
+        "proposedSolution": "Mentor matching and code review system.",
+        "createdBy": "alex@example.com",
+        "createdAt": "2026-06-01"
+    }
+]
