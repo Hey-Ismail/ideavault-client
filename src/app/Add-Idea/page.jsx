@@ -1,11 +1,47 @@
 "use client"
-import PrivateRoute from "@/components/PrivateRoute";
+import { authClient } from "@/lib/auth-client";
+import { Slide, toast } from "react-toastify";
 
 export default function AddIdeaPage() {
 
-  const handleSubmitForm = (event) => {
+  const { data: session } = authClient.useSession();
+  const handleSubmitForm = async (event) => {
 
     event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const idea = Object.fromEntries(formData.entries());
+    idea.createdBy = session?.user?.email;
+
+    // console.log(idea);
+    // console.log("Logged User:", session?.user?.email);
+    // console.log("Idea:", idea);
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(idea),
+    });
+
+    const data = await res.json();
+
+    if (data.insertedId) {
+      // toast.success("");
+      toast.success('Idea Added Successfully!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+      // event.target.reset();
+    }
 
   }
 
@@ -21,6 +57,7 @@ export default function AddIdeaPage() {
             </label>
 
             <input
+              required
               name="title"
               type="text"
               placeholder="StudyBuddy AI"
@@ -34,6 +71,7 @@ export default function AddIdeaPage() {
             </label>
 
             <select
+              required
               name="category"
               className="w-full mt-1 h-11 rounded-lg border px-3"
             >
@@ -55,6 +93,7 @@ export default function AddIdeaPage() {
             <input
               name="imageURL"
               type="url"
+              required
               placeholder="https://images.unsplash.com/photo-..."
               className="w-full mt-1 h-11 rounded-lg border px-3"
             />
@@ -69,6 +108,7 @@ export default function AddIdeaPage() {
               name="estimatedBudget"
               type="text"
               placeholder="$15,000"
+              required
               className="w-full mt-1 h-11 rounded-lg border px-3"
             />
           </div>
@@ -81,6 +121,7 @@ export default function AddIdeaPage() {
             <input
               name="targetAudience"
               type="text"
+              required
               placeholder="University Students"
               className="w-full mt-1 h-11 rounded-lg border px-3"
             />
@@ -94,6 +135,7 @@ export default function AddIdeaPage() {
             <input
               name="tags"
               type="text"
+              required
               placeholder="AI, Education, Students"
               className="w-full mt-1 h-11 rounded-lg border px-3"
             />
@@ -107,6 +149,7 @@ export default function AddIdeaPage() {
           </label>
 
           <textarea
+            required
             name="shortDescription"
             rows={2}
             // placeholder="AI-powered study assistant for university students."
@@ -120,6 +163,7 @@ export default function AddIdeaPage() {
           </label>
 
           <textarea
+            required
             name="detailedDescription"
             rows={3}
             // placeholder="StudyBuddy AI helps students generate notes, quizzes, and personalized study plans based on course materials."
@@ -135,6 +179,7 @@ export default function AddIdeaPage() {
             </label>
 
             <textarea
+              required
               name="problemStatement"
               rows={3}
               // placeholder="e.g : Students struggle to organize study materials efficiently."
@@ -148,6 +193,7 @@ export default function AddIdeaPage() {
             </label>
 
             <textarea
+              required
               name="proposedSolution"
               rows={3}
               // placeholder="Provide AI-generated summaries, quizzes, and personalized study schedules."
@@ -157,12 +203,18 @@ export default function AddIdeaPage() {
 
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-10 items-center">
           <button
             type="submit"
-            className="mt-5 w-full md:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 "
+            className=" mt-5 w-full md:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 "
           >
             Submit Idea
+          </button>
+          <button
+            type="reset"
+            className="  mt-5 w-full md:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 "
+          >
+            Reset Idea
           </button>
         </div>
       </form>

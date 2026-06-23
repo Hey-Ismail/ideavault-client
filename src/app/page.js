@@ -1,73 +1,14 @@
 "use client";
-
-import Image from "next/image";
-
-
+// import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import TrendingIdeas from "@/components/TrendingIdeas";
 
 
-// //  {
-//         "id": 1,
-//         "title": "StudyBuddy AI",
-//         "shortDescription": "AI-powered study assistant for university students.",
-//         "detailedDescription": "StudyBuddy AI helps students generate notes, quizzes, and personalized study plans based on course materials.",
-//         "category": "AI",
-//         "tags": [
-//             "AI",
-//             "Education",
-//             "Students"
-//         ],
-//         "imageURL": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-//         "estimatedBudget": "$15,000",
-//         "targetAudience": "University Students",
-//         "problemStatement": "Students struggle to organize study materials efficiently.",
-//         "proposedSolution": "Provide AI-generated summaries, quizzes, and study schedules.",
-//         "createdBy": "john@example.com",
-//         "createdAt": "2026-06-15"
-//     },
-//     {
-//         "id": 2,
-//         "title": "MediTrack",
-//         "shortDescription": "Smart medication reminder platform.",
-//         "detailedDescription": "A healthcare platform that reminds patients to take medications and tracks adherence.",
-//         "category": "Health",
-//         "tags": [
-//             "Health",
-//             "Medicine",
-//             "Reminder"
-//         ],
-//         "imageURL": "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
-//         "estimatedBudget": "$20,000",
-//         "targetAudience": "Patients and Elderly People",
-//         "problemStatement": "Many patients forget their medication schedules.",
-//         "proposedSolution": "Automated reminders and progress tracking.",
-//         "createdBy": "alice@example.com",
-//         "createdAt": "2026-06-12"
-//     },
-//     {
-//         "id": 3,
-//         "title": "GreenCart",
-//         "shortDescription": "Eco-friendly grocery delivery service.",
-//         "detailedDescription": "Connects customers with local organic farmers and provides sustainable delivery.",
-//         "category": "Environment",
-//         "tags": [
-//             "Eco",
-//             "Food",
-//             "Delivery"
-//         ],
-//         "imageURL": "https://images.unsplash.com/photo-1542838132-92c53300491e",
-//         "estimatedBudget": "$30,000",
-//         "targetAudience": "Eco-conscious Consumers",
-//         "problemStatement": "Access to fresh organic products is limited.",
-//         "proposedSolution": "Direct farmer-to-customer delivery platform.",
-//         "createdBy": "mike@example.com",
-//         "createdAt": "2026-06-10"
-//     // },
 const slides = [
   {
     id: 1,
@@ -96,7 +37,9 @@ const slides = [
       "https://images.unsplash.com/photo-1542838132-92c53300491e",
   },
 ];
+
 export default function Home() {
+
   return (
     <>
       <section>
@@ -141,6 +84,7 @@ export default function Home() {
           ))}
         </Swiper>
       </section>
+      <TrendingIdeas />
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-5 text-center">
           <h2 className="text-4xl font-bold mb-6">

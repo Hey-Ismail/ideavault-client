@@ -3,7 +3,7 @@ import React from 'react';
 
 const ExploreIdeas = async () => {
 
-    const data = await fetch("http://localhost:5000/ideas").then(res => res.json())
+    const data = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas`).then(res => res.json())
     return (
         <div>
             {/* <h1>{data.length}</h1> */}
@@ -11,7 +11,7 @@ const ExploreIdeas = async () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     {data.map((item) => (
                         <IdeaCards
-                            key={item.id}
+                            key={item._id}
                             data={item}
                         />
                     ))}

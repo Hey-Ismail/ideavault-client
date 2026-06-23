@@ -1,20 +1,20 @@
+import Link from 'next/link';
 import React from 'react';
+import CommentSection from "@/components/CommentSection";
 
 const IdeaDetailesPage = async ({ params }) => {
     const { ID } = await params;
 
     const res = await fetch(
-        `http://localhost:5000/ideas/${ID}`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/ideas/${ID}`
     );
     // const idea = await res.json();
 
     const idea = await res.json();
     return (
         <div>
-            {/* <h1>{idea.title}</h1> */}
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden m-21">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden mt-15">
 
-                {/* Image */}
                 <img
                     src={idea.imageURL}
                     alt={idea.title}
@@ -23,7 +23,6 @@ const IdeaDetailesPage = async ({ params }) => {
 
                 <div className="p-6">
 
-                    {/* Top Section */}
                     <div className="flex items-center justify-between flex-wrap gap-2">
 
                         <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">
@@ -36,7 +35,6 @@ const IdeaDetailesPage = async ({ params }) => {
 
                     </div>
 
-                    {/* Title */}
                     <h1 className="text-3xl font-bold mt-3">
                         {idea.title}
                     </h1>
@@ -45,7 +43,6 @@ const IdeaDetailesPage = async ({ params }) => {
                         {idea.shortDescription}
                     </p>
 
-                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-3">
                         {idea.tags?.map((tag) => (
                             <span
@@ -57,7 +54,6 @@ const IdeaDetailesPage = async ({ params }) => {
                         ))}
                     </div>
 
-                    {/* Info Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
 
                         <div className="bg-gray-50 p-3 rounded-lg">
@@ -102,7 +98,6 @@ const IdeaDetailesPage = async ({ params }) => {
 
                     </div>
 
-                    {/* Description */}
                     <div className="mt-5">
                         <h2 className="font-bold text-lg mb-2">
                             Description
@@ -113,7 +108,6 @@ const IdeaDetailesPage = async ({ params }) => {
                         </p>
                     </div>
 
-                    {/* Problem & Solution */}
                     <div className="grid md:grid-cols-2 gap-4 mt-5">
 
                         <div className="bg-red-50 border border-red-100 rounded-lg p-4">
@@ -139,7 +133,16 @@ const IdeaDetailesPage = async ({ params }) => {
                     </div>
 
                 </div>
-
+            </div>
+            <div className='flex justify-center items-center '>
+                <CommentSection key={idea._id} ideaId={ID} ideaTitle={idea.title} />
+            </div>
+            <div className='flex justify-center items-center mb-10'>
+                <Link href="/">
+                    <button className='mt-12  bg-blue-600 p-2.5 text-white rounded-xl hover:bg-blue-700'>
+                        Back to home
+                    </button>
+                </Link>
             </div>
         </div>
     );
